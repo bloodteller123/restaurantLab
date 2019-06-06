@@ -1,0 +1,185 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+
+  <title>The HTML5 test</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./welcomePage.css" rel="stylesheet">
+  <!--<link rel="stylesheet" href="#"> add style sheet here-->
+
+</head>
+
+<body style="margin:0px;padding: 0px;background-color:whitesmoke">
+  <div class="topDiv" style="height: auto;background-color: aqua; background:url('./assets/foodThumbnail.jpg') ">
+      <div class="logo" style="width: 10%;height: 10%">
+        <img src="./assets/logo.jpg" alt="logo" style="max-width: 100%;max-height: 100%;opacity: 0.5;">
+      </div>
+
+    <div class="search-container" style="opacity: 0.9;padding-left: 150px;width: 70%;margin:auto">
+        <input style="border: none;font-size: 30px; height: 50px;width: 80%" 
+            type="text" placeholder="Find your food and places" name="search" id="search">
+        <button style="width:80%;height: auto" type="submit" onclick="check()">
+            <span style="font-size: 30px">
+                Order Your Favourite Food
+            </span>
+        </button>
+    </div>
+    <div class="citySelection" style="margin-top: 200px;margin-left: 550px;opacity: 0.89">
+        <div style="display: block; 
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 40px; ">
+            <span style="color:white">City Selection</span>
+        </div>
+        <select name="city" id="city" style="width: 20%">
+            <option value ="Ottawa">Ottawa</option>
+            <option value ="Toronto">Toronto</option>
+            <option value ="Vancouver">Vancouver</option>
+            <option value ="Montreal">Montreal</option>
+        </select> 
+      </div>
+      <br/>
+      <br/>
+      <hr/>
+  </div>
+  <div class="middleDiv" style="height: auto;width: auto; margin-bottom:100px;">
+      
+      <div class="Typewrapper">
+          <h2 style="padding-left:50px">
+            <div style="display:block">
+                Quick Spot Your Food
+            </div>
+            <span style="font-size: 15px;color:#89959B;">
+                Discover food by their types
+            </span>
+          </h2>
+          <div class="typeContainer" style="margin-left:100px ;width:80%;background-color: white;border-style: groove;">
+                <div class="typeSelection" style="display: inline-block">
+                    <ul class="category" style="height:50px;width:100%;margin-left:150px">
+                        <li>
+                            <div class="subType" onclick="location.href='./restaurants.html'"> 
+                                <img src="./assets/Breakfast.png" style="max-width: 100%; max-height:100%;">
+                                <span>Breakfast</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="subType" onclick="location.href='./restaurants.html'"> 
+                                <img src="./assets/lunch.png" style="margin-bottom:10px;max-width: 100%; max-height:100%;">
+                                <span>Lunch</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="subType" onclick="location.href='./restaurants.html'"> 
+                                <img src="./assets/dinner.png" style="max-width: 100%; max-height:100%;">
+                                <span>Dinner</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="subType" onclick="location.href='./restaurants.html'">
+                                <img src="./assets/take_out.jpeg" style="max-width: 100%; max-height:100%;">
+                                <span>Take-out</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="subType" onclick="location.href='./restaurants.html'">
+                                <img src="./assets/delivery.png" style="max-width: 100%; max-height:100%;">
+                                <span>Delivery</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="subType" onclick="location.href='./restaurants.html'">
+                                <img src="./assets/drinks.png" style="max-width: 100%; max-height:100%;">
+                                <span>Drinks</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="subType" onclick="location.href='./restaurants.html'">
+                                <img src="./assets/dessert.png" style="max-width: 100%; max-height:100%;">
+                                <span>Desserts</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+      </div>
+      <div class="wrapper">
+          <div>
+            <h2 style="padding-left:30px">
+                <div style="display:block">
+                        Collections
+                </div>
+                <span style="font-size: 15px;color:#89959B;">
+                    Explore curated lists of top restaurants, cafes, pubs, and bars in Ottawa, based on trends
+                </span>
+            </h2>
+          </div>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                            <h3>Super Sushi</h3>
+                            <img src="assets/collection3.jpg">
+                            <p>Classic maki-style rolls, sashimi or nigiri sushi, hit up these spots for your favourite Japanese snack</p>
+                            
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <h3>Sweet Tooth</h3>
+                        <img src="assets/collection2.jpg">
+                        <p>From cookies and doughnuts to ice cream and cakes, knock yourself out with these classic and creative desserts</p>
+                        
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <h3>Luxury Dining</h3>
+                        <img src="assets/collection1.jpg">
+                        <p>The best restaurants in town for a complete fine-dining experience.</p>
+                        
+                    </div>
+                </div>
+            </div>
+      </div>
+
+      <div class="location" style="">
+            <div>
+            <h2 style="padding-left:50px">
+              <div style="display:block">
+                    Popular localities in and around Ottawa
+              </div>
+              <span style="font-size: 15px;color:#89959B;">
+                    Explore restaurants, bars, and cafés by locality
+              </span>
+            </h2>
+            </div>
+            <div class="locationContainer">
+                
+                <div ><span class="place">Downtown <span style="color:#89959B;">(123)</span></span></div>
+                <div ><span class="place">Kanata <span style="color:#89959B;">(234)</span></span></div>
+                <div ><span class="place">Westbro <span style="color:#89959B;">(45)</span> </span></div>
+                <div ><span class="place">Bayview <span style="color:#89959B;">(456)</span></span></div>
+                <div ><span class="place">Bayshore <span style="color:#89959B;">(23)</span></span></div>
+                <div ><span class="place">Hunt club <span style="color:#89959B;">(64)</span></span></div>
+                <div ><span class="place">Billings Bridge <span style="color:#89959B;">(76)</span></span></div>
+                <div ><span class="place">Nepean <span style="color:#89959B;">(65)</span></span></div>
+                <div ><span class="place">South keys <span style="color:#89959B;">(34)</span></span></div>
+                <div ><span class="place">Sandy Hill <span style="color:#89959B;">(345)</span></span></div>
+                <div ><span class="place">Carp <span style="color:#89959B;">(253)</span></span></div>
+                <div ><span class="place">Terry Fox <span style="color:#89959B;">(643)</span></span></div>
+                <div ><span class="place">Bells Corner <span style="color:#89959B;">(74)</span></span></div>
+                <div ><span class="place">Lower Town <span style="color:#89959B;">(123)</span></span></div>
+                <div ><span class="place">Riverside <span style="color:#89959B;">(23)</span></span></div>
+                <div ><span class="place">Airport <span style="color:#89959B;">(64)</span></span></div>
+            </div>
+      </div>
+  </div>
+  <script src="checkInput.js"></script>
+</body>
+</html>
+
