@@ -50,7 +50,9 @@ $(document).ready(function(){
 
 // add item to cart 
 $(document).ready(function(){
+
     //style='display: inline'
+    $("#order").prop('disabled', true);
     var totalPrice = {
         val: 0,
         get getVal(){
@@ -71,6 +73,7 @@ $(document).ready(function(){
             $('.itemLists').children().find(".add").click();
         }
         else{
+            
             var itemDiv = [
                 '<div id="item" class="item" style="margin-top:5px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);transition: 0.3s;border-radius: 5px;background:#f1f1f1;">',
                     '<button class="remove" style="width:20px;">&times</button>',
@@ -92,6 +95,7 @@ $(document).ready(function(){
        
             $('.price').text(0);
             $('.price').text(totalPrice.val.toFixed(2));
+            $("#order").prop('disabled', false);
         }
     });
     
@@ -117,13 +121,15 @@ $(document).ready(function(){
             $('.price').text(0);
             $('.price').text(totalPrice.val.toFixed(2));
         }
-
-
     });
 
     $(document).on("click",".remove",(event)=>{
         // why can't we use $(this) here ? which returns undefined ???
         //console.log($(event.currentTarget).closest('.item').attr('id'));
+        var numbers = parseInt($(event.currentTarget).closest('.item').find('.quantity').text());
+        totalPrice.val -=(numbers * parseFloat($(event.currentTarget).closest('.item').children().find('.indPrice').text()));
+        $('.price').text(0);
+        $('.price').text(totalPrice.val.toFixed(2));
         $(event.currentTarget).closest('.item').remove();
     });
 });
