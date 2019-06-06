@@ -131,6 +131,9 @@ $(document).ready(function(){
         $('.price').text(0);
         $('.price').text(totalPrice.val.toFixed(2));
         $(event.currentTarget).closest('.item').remove();
+        if((event.currentTarget).closest('.item').length===undefined){
+            $("#order").prop('disabled', true);
+        }
     });
 });
 
