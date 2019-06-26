@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="order.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="helper.js"></script>
+</head>
+<div>
+	<div class="header">
+		<div class="logo">
+			<a href="#">
+				<img src="./assets/logo.jpg" alt="logo" style="max-width: 100%;max-height: 100%;opacity: 0.3;">
+			</a>
+		</div>
+		<div>
+			<select name="city" id="city" style="width:300px">
+				<option value="Ottawa">Ottawa</option>
+				<option value="Toronto">Toronto</option>
+				<option value="Vancouver">Vancouver</option>
+				<option value="Montreal">Montreal</option>
+			</select>
+		</div>
+		<div style="padding-top: 25px;padding-left:15px">
+			<input style="border: none;font-size: 10px; height: 30px;width: 200px;margin-top:-10px" type="text"
+				placeholder="Search for restaurants...." name="search">
+		</div>
+		<div>
+			<button id="search">
+				Search
+			</button>
+		</div>
+	</div>
+</div>
+
+<body onload="onStart(); createOrderDivs();">
+	<h1 class="orderHeader">Order</h1>
+	<div class="orderSummary">
+		<h2 class="itemHeader">Your Items</h2>
+		<div class="items">
+		</div>
+		<div class="finalRow">
+			<div class="checkout" style="padding-left:55px">
+				<button id="checkoutButton" onclick="checkout()">Checkout</button>
+			</div>            
+			<div class="menu" style="padding-left:55px">
+                <button id="menuButton" onclick="menu()">Add more food</button>
+            </div>
+		</div>
+	</div>
+</body>
+</html>

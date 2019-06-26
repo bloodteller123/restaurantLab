@@ -1,0 +1,672 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The HTML5 test2</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link href="./restaurants.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body style="background-color:#F3F3F3">
+    <div class="container">
+        <div>
+            <div class="header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./assets/logo.jpg" alt="logo" style="max-width: 100%;max-height: 100%;opacity: 0.3;">
+                    </a>
+                </div>
+                <div>
+                    <select name="city" id="city" style="width:300px">
+                        <option value="Ottawa">Ottawa</option>
+                        <option value="Toronto">Toronto</option>
+                        <option value="Vancouver">Vancouver</option>
+                        <option value="Montreal">Montreal</option>
+                    </select>
+                </div>
+                <div style="padding-top: 25px;padding-left:15px">
+                    <input style="border: none;font-size: 10px; height: 30px;width: 200px;margin-top:-10px" type="text"
+                        placeholder="Search for restaurants...." name="search" id="search">
+                </div>
+                <div>
+                    <button id="searchB" onclick="check()">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mainContent">
+            <div class="sideBar" style="float:left;width:15%;padding-left: 10px;margin-top: 20px">
+                <div class="sortBy">
+                    <div class="title">
+                        Sort By
+                    </div>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Popularity
+                                <span style="color: gray"> - high to low</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Rating
+                                <span style="color: gray"> - high to low</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Cost
+                                <span style="color: gray"> - high to low</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Recently Added
+                                <span style="color: gray"> - new to old</span>
+                            </span>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="sortBy">
+                    <div class="title">
+                        Category
+                    </div>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Dine-out
+                                <span style="color: gray;padding-left: 100px"> - 345</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Delivery
+                                <span style="color: gray;padding-left: 100px"> - 789</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Drinks
+                                <span style="color: gray;padding-left: 113px"> - 123</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Barbecue
+                                <span style="color: gray;padding-left: 97px"> - 382</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sortBy">
+                    <div class="title">
+                        Location
+                    </div>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Ottawa Central
+                                <span style="color: gray;padding-left: 61px"> - 345</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Ottawa West
+                                <span style="color: gray;padding-left: 77px"> - 789</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Ottawa South
+                                <span style="color: gray;padding-left: 71px"> - 123</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Ottawa East
+                                <span style="color: gray;padding-left: 81px"> - 382</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Kanata
+                                <span style="color: gray;padding-left: 114px"> - 382</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Nepean
+                                <span style="color: gray;padding-left: 110px"> - 382</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sortBy">
+                    <div class="title">
+                        Cuisine
+                    </div>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Fast Food
+                                <span style="color: gray;padding-left: 96px"> - 13</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Chinese
+                                <span style="color: gray;padding-left: 108px"> - 43</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Burger
+                                <span style="color: gray;padding-left: 115px"> - 65</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Cafe
+                                <span style="color: gray;padding-left: 128px"> - 234</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Canadian
+                                <span style="color: gray;padding-left: 98px"> - 123</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Pizza
+                                <span style="color: gray;padding-left: 123px"> - 432</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Sandwich
+                                <span style="color: gray;padding-left: 96px"> - 64</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sortBy">
+                    <div class="title">
+                        Establishment Type
+                    </div>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Quick Bites
+                                <span style="color: gray;padding-left: 85px"> - 54</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Casual Dining
+                                <span style="color: gray;padding-left: 69px"> - 23</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Food Courts
+                                <span style="color: gray;padding-left: 82px"> - 63</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Food Trucks
+                                <span style="color: gray;padding-left: 81px"> - 123</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Bars
+                                <span style="color: gray;padding-left: 133px"> - 78</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Bakeries
+                                <span style="color: gray;padding-left: 107px"> - 421</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Beverage Shops
+                                <span style="color: gray;padding-left: 60px"> - 97</span>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="sortBy">
+                    <div class="title">
+                        Cost for Two
+                    </div>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                Less than CA$30
+                                <span style="color: gray;padding-left:51px"> - 412</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                CA$30 to CA$50
+                                <span style="color: gray;padding-left:50px"> - 241</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                CA$50 to CA$70
+                                <span style="color: gray;padding-left:50px"> - 156</span>
+                            </span>
+                        </div>
+                    </a>
+                    <a href="#" class="link">
+                        <div class="sub">
+                            <span>
+                                CA$70 +
+                                <span style="color: gray;padding-left:104px"> - 45</span>
+                            </span>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="sortBy">
+                    <div class="title">
+                        More Filters
+                    </div>
+                    <div>
+                        <input type="checkbox" name="nightFood" value="food"> Open at Night (00:00)<br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="liveMusic" value="food"> Live Music<br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="onlineBooking" value="food"> Online Bookings<br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="deserts" value="food"> Desserts & Baked Goods<br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="outdoor" value="food"> Outdoor Seatings<br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="chains" value="food"> Exclude Chains<br>
+                    </div>
+                </div>
+            </div>
+            <div class="mainItem" style="float:left;width:70%">
+                <ul class="resList">
+                    <li>
+                        <div class="restaurant-top">
+                            <div class="upperPart" style="display: flex;flex-direction: row">
+                                <div class="thumbnail" style=" width:25%">
+                                    <img src="./assets/food/sushi.jpeg"
+                                        style="height: auto;width:auto;max-width: 100%; max-height:100%;">
+                                </div>
+                                <div class="info" style=" width:45%">
+                                    <span class="foodType">
+                                        CASUAL DINING
+                                    </span>
+                                    <span class="resName">
+                                        Eclipse Asian Cuisine
+                                    </span>
+                                    <span class="place">
+                                        <b>Lower Town</b>
+                                    </span>
+                                    <span class="location">
+                                        376 Rideau Street, Ottawa K1N 5Y6
+                                    </span>
+                                </div>
+                                <div class="rating" style="width:30%">
+                                    <img src="assets/images.png" style="max-width:50%;max-height: 50%;display: block">
+                                    <div style="padding-top:30px;">
+                                        <span style="padding-left:30px;font-weight: 600">234 votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="lowerPart">
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        CUISINES:
+                                    </span>
+                                    <span style="margin-left: 117px">Japan, Fusion</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        COST FOR TWO:
+                                    </span>
+                                    <span style="margin-left: 60px">CA $40</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        HOURS:
+                                    </span>
+                                    <span style="margin-left: 139px">7am – 7pm (Mon-Fri),8am – 4pm (Sat-Sun)</span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <div class="extra"><img src="assets/call.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Call</span></div>
+                                <div class="extra" onclick="location.href='./menu.html'"><img src="assets/menu.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Menu</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant">
+                            <div class="upperPart" style="display: flex;flex-direction: row">
+                                <div class="thumbnail" style=" width:25%">
+                                    <img src="./assets/food/burger.jpeg" style="max-width: 100%; max-height:100%;">
+                                </div>
+                                <div class="info" style=" width:45%">
+                                    <span class="foodType">
+                                        CASUAL DINING
+                                    </span>
+                                    <span class="resName">
+                                        Bite Burger House
+                                    </span>
+                                    <span class="place">
+                                        <b>Vanier</b>
+                                    </span>
+                                    <span class="location">
+                                        181 McArthur Avenue, Ottawa K1L 6P8
+                                    </span>
+                                </div>
+                                <div class="rating" style="width:30%">
+                                    <img src="assets/images.png" style="max-width:50%;max-height: 50%;display: block">
+                                    <div style="padding-top:30px;">
+                                        <span style="padding-left:30px;font-weight: 600">523 votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="lowerPart">
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        CUISINES:
+                                    </span>
+                                    <span style="margin-left: 117px">Burgers</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        COST FOR TWO:
+                                    </span>
+                                    <span style="margin-left: 60px">CA $32</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        HOURS:
+                                    </span>
+                                    <span style="margin-left: 139px">11am – 7pm (Mon-Fri),2pm – 6pm (Sat-Sun)</span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <div class="extra"><img src="assets/call.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Call</span></div>
+                                <div class="extra" onclick="location.href='./menu.html'"><img src="assets/menu.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Menu</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant">
+                            <div class="upperPart" style="display: flex;flex-direction: row">
+                                <div class="thumbnail" style=" width:25%">
+                                    <img src="./assets/food/sandwich.jpeg" style="max-width: 100%; max-height:100%;">
+                                </div>
+                                <div class="info" style=" width:45%">
+                                    <span class="foodType">
+                                        BAKERY,CAFÉ
+                                    </span>
+                                    <span class="resName">
+                                        Misto Fine Food Emporium
+                                    </span>
+                                    <span class="place">
+                                        <b>Wellington West</b>
+                                    </span>
+                                    <span class="location">
+                                        1365 Wellington Street, Ottawa K1Y 3B8
+                                    </span>
+                                </div>
+                                <div class="rating" style="width:30%">
+                                    <img src="assets/images.png" style="width:96px;height: 96px;display: block">
+                                    <div style="padding-top:30px;">
+                                        <span style="padding-left:30px;font-weight: 600">312 votes</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="lowerPart">
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        CUISINES:
+                                    </span>
+                                    <span style="margin-left: 117px">Sandwich, Bakery</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        COST FOR TWO:
+                                    </span>
+                                    <span style="margin-left: 60px">CA $40</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        HOURS:
+                                    </span>
+                                    <span style="margin-left: 139px">7am – 10pm (Mon-Fri),9am – 4pm (Sat-Sun)</span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <div class="extra"><img src="assets/call.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Call</span></div>
+                                <div class="extra" onclick="location.href='./menu.html'"><img src="assets/menu.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Menu</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant">
+                            <div class="upperPart" style="display: flex;flex-direction: row">
+                                <div class="thumbnail" style="  width:25%">
+                                    <img src="./assets/food/chinesefood.jpeg" style="max-width: 100%; max-height:100%;">
+                                </div>
+                                <div class="info" style=" width:45%">
+                                    <span class="foodType">
+                                        CASUAL DINING
+                                    </span>
+                                    <span class="resName">
+                                        SRoyal Treasure
+                                    </span>
+                                    <span class="place">
+                                        <b>Chinatown</b>
+                                    </span>
+                                    <span class="location">
+                                        774 Somerset Street West, Ottawa K1R 6R1
+                                    </span>
+                                </div>
+                                <div class="rating" style="width:30%">
+                                    <img src="assets/images.png" style="max-width:50%;max-height: 50%;display: block">
+                                    <div style="padding-top:30px;">
+                                        <span style="padding-left:30px;font-weight: 600">193 votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="lowerPart">
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        CUISINES:
+                                    </span>
+                                    <span style="margin-left: 117px">Chinese, Japanese, Thai</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        COST FOR TWO:
+                                    </span>
+                                    <span style="margin-left: 60px">CA $55</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        HOURS:
+                                    </span>
+                                    <span style="margin-left: 139px">9am – 10pm (Mon-Fri),10am – 4pm (Sat-Sun)</span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <div class="extra"><img src="assets/call.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Call</span></div>
+                                <div class="extra" onclick="location.href='./menu.html'"><img src="assets/menu.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Menu</span></div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="restaurant">
+                            <div class="upperPart" style="display: flex;flex-direction: row">
+                                <div class="thumbnail" style=" width:25%">
+                                    <img src="./assets/food/desserts.jpeg" style="max-width: 100%; max-height:100%;">
+                                </div>
+                                <div class="info" style=" width:45%">
+                                    <span class="foodType">
+                                        deserts polar
+                                    </span>
+                                    <span class="resName">
+                                        Stella Luna Gelato Café
+                                    </span>
+                                    <span class="place">
+                                        <b>ByWard Market</b>
+                                    </span>
+                                    <span class="location">
+                                        136 Saint Patrick Street, Ottawa K1N 5J9
+                                    </span>
+                                </div>
+                                <div class="rating" style="width:30%">
+                                    <img src="assets/images.png" style="max-width:50%;max-height: 50%;display: block">
+                                    <div style="padding-top:30px;">
+                                        <span style="padding-left:30px;font-weight: 600">435 votes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="lowerPart">
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        CUISINES:
+                                    </span>
+                                    <span style="margin-left: 117px">Ice Cream, Desserts, Cafe</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        COST FOR TWO:
+                                    </span>
+                                    <span style="margin-left: 60px">CA $29</span>
+                                </div>
+                                <div style="">
+                                    <span style="font-size: 20px">
+                                        HOURS:
+                                    </span>
+                                    <span style="margin-left: 139px">7am – 7pm (Mon-Fri),8am – 4pm (Sat-Sun)</span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <div class="extra"><img src="assets/call.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Call</span></div>
+                                <div class="extra" onclick="location.href='./menu.html'"><img src="assets/menu.png"
+                                        style="max-height: 10%;max-width:10%;padding-left: 125px;"><span
+                                        style="position: relative;left:5%">Menu</span></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--
+        <div>
+            <div class="footer">
+                <p>Footer</p>
+            </div>
+        </div>
+        -->
+    </div>
+</body>
+<script src="checkInput.js"></script>
+
+</html>

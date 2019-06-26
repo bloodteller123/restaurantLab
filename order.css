@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+#city{
+    height:30px;
+    margin-top: 20px;
+}
+
+#city option{
+    height:30px;
+}
+
+#search{
+    border:1px solid rgba(255, 255, 255, .75);
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.orderSummary {
+    width: 95%;
+    margin: 20px;
+    position: relative;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    border-width: 1px;
+}
+
+.item {
+    width: 95%;
+    padding: 20px;
+    border-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: #17202A;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.finalRow {
+    width: 95%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.itemHeader {
+    margin: 20px;
+    padding-top: 5px;
+}
+
+.totalPrice {
+    font-size: 120%;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.checkoutButton {
+  background-color: grey;
+  color: white;
+  margin-top: 10px;
+  width: 15%;
+  padding: 10px;
+  height: 40%;
+  border: none;
+  opacity: 0.9;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.header {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    background-color: #e2dede;
+
+    margin-left:20px;
+    margin-right:20px;
+
+    padding-left:100px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+    border-radius: 5px;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+.logo{
+    padding-left: 150px;
+    width: 10%;
+    margin-top:-10px;
+}
+
+.header a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header a.active {
+    background-color: dodgerblue;
+    color: white;
+}

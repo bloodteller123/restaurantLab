@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="checkout.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script src="helper.js"></script>
+</head>
+
+<div>
+	<div class="header">
+		<div class="logo">
+			<a href="#">
+				<img src="./assets/logo.jpg" alt="logo" style="max-width: 100%;max-height: 100%;opacity: 0.3;">
+			</a>
+		</div>
+		<div>
+			<select name="city" id="city" style="width:300px">
+				<option value="Ottawa">Ottawa</option>
+				<option value="Toronto">Toronto</option>
+				<option value="Vancouver">Vancouver</option>
+				<option value="Montreal">Montreal</option>
+			</select>
+		</div>
+		<div style="padding-top: 25px;padding-left:15px">
+			<input style="border: none;font-size: 10px; height: 30px;width: 200px;margin-top:-10px" type="text"
+				placeholder="Search for restaurants...." name="search">
+		</div>
+		<div>
+			<button id="search">
+				Search
+			</button>
+		</div>
+	</div>
+</div>
+
+
+
+<body onload="onStart(); createCheckoutDivs();">
+
+	<h1 class="checkoutHeader">Checkout</h1>
+
+	<div class="deliveryInfo">
+		<h2 class="deliveryHeader">Delivery Information</h2>
+		<form class="deliveryForm">
+			<label for="firstName">First Name:</label>
+			<input type="text" placeholder="Enter first name" name="firstName" required>
+			<label for="lastName">Last Name</label>
+			<input type="text" placeholder="Enter last name" name="lastName" required>
+			<label for="email">Email</label>
+			<input type="text" placeholder="Enter email" name="email" required>
+			<label for="phoneNumber">Phone Number</label>
+			<input type="text" placeholder="Enter phone number" name="phoneNumber" required>
+			<label for="address">Address</label>
+			<input type="text" placeholder="Enter address" name="address" required>
+			<label for="postalCode">Postal Code</label>
+			<input type="text" placeholder="Enter postal code" name="postalCode" required>
+			<label for="instructions">Extra Instructions</label>
+			<input type="text" placeholder="Such as 'don't ring the doorbell'" name="instructions" required>
+			<label for="paymentType">Payment Type</label>
+			<div class="paymentRadio">
+				<label><input type="radio" name="paymentType" value="credit" required>Credit</label>
+				<label><input type="radio" name="paymentType" value="debit">Debit</label>
+				<label><input type="radio" name="paymentType" value="cash">Cash</label>
+			</div>
+
+			<div class="creditCardInfo">
+				
+			</div>
+
+			<!-- TODO: Add delivery/tax/subtotal later -->
+			<div class="totalCost"></div>
+
+			<input class="submitButton" type="submit" value="Send" />
+		</form>
+	</div>
+</body>
+
+</html>
