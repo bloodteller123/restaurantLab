@@ -43,10 +43,7 @@ body {
     display:inline-block;
     width:49%;
     margin-left:7px;
-
-
     font-size: 40px;
-
 }
 
 
@@ -94,7 +91,6 @@ body {
     display: flex;
     flex-direction: row;
     background-color: #e2dede;
-
     margin-left:20px;
     margin-right:20px;
 
@@ -120,17 +116,14 @@ body {
     width: 10%;
     margin-top:-10px;
   }
-
   .header a:hover {
     background-color: #ddd;
     color: black;
   }
-
   .header a.active {
     background-color: dodgerblue;
     color: white;
   }
-
 
   #city{
       height:30px;

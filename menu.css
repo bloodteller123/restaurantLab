@@ -191,6 +191,7 @@
 .itemLists{
   list-style-type: none;
 }
+<<<<<<< HEAD
 
 #checkoutButton{
   border-style: solid;
@@ -198,3 +199,5 @@
   height:30px;
   font-size: 20px;
 }
+=======
+>>>>>>> 6dbf8107e444d54ab7255b9cedda4af72ca1b86e
